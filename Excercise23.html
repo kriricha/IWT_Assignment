@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .card{
+            width: 33%;
+            box-shadow: 2px 2px 2px black;
+            padding: 2px;
+            position: relative;
+        }
+        .card > img {
+            width: 100%;
+        }
+        .desc{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: flex; justify-content:space-evenly; flex-direction: row;"></div>
+    <script >
+        images=["4.jpg","2.jpg","6.jpg"]
+        titles=["Annual Function", "Guest Lecture"]
+        for(i=0;i<=2;i++){
+            card="<div class='card'>"
+            +"<img src='images/"+images[i]+"'>"
+            +"<div class='desc'>"
+                +"<h1>Title</h1>"
+                +"<p>Introduction</p>"
+            +"</div>"
+            +"</div>"
+            document.write(card);
+        }
+        
+    </script>
+</body>
+</html>

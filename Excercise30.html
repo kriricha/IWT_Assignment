@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <title>Guess the number Game</title>
+    <style>
+        .outer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            /* color:rgb(205, 188, 33); */
+            color: black;
+            font-size: 40px;
+            /* border: 1px solid black; */
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="1">
+            <script>
+                max=parseInt(prompt("Enter maximum integer of the range"));
+                min=parseInt(prompt("Enter minimum integer of the range"));
+        
+                x=getRandom(min,max);
+        
+                function getRandom(min,max){
+                    return Math.floor(Math.random()*(max-min+1))+min;
+                }
+        
+                console.log(x)
+        
+                a=parseInt(prompt("Guess a number between "+min+" and "+max));
+               // document.write(a+"<br>")
+        
+                while(a!=x){
+                    if(a>x){
+                        alert("Too High!! Try Again");
+                    }
+                    else{
+                        alert("Too low!! Try Again");
+                    }
+                    a=parseInt(prompt("Guess a number between "+min+" and "+max));
+                }
+        
+                document.write("Congratulations!! You guessed the correct number.")
+            </script>
+        </div>
+        
+        <!-- <br> -->
+        <div class="2">
+            <img src="images/congo.jpg" alt="">
+        </div>
+        
+    </div>
+    
+</body>
+</html>

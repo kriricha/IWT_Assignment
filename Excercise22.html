@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+            border: solid 1px black;
+        }
+        .inner1{
+            background-color: black;
+            height: 80px;
+            width: 80px;
+            border: solid 1px rgb(216, 112, 178);
+        }
+        .inner2{
+            background-color:white;
+            height: 80px;
+            width: 80px;
+            border: solid 1px rgb(179, 255, 0);
+        }
+        .inner1:hover{
+            background-color: red;
+        }
+        .inner2:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <script type="text/javascript">
+            rows=prompt("Enter no of rows");
+            cols=prompt("Enter no of columns");
+            for(i=1;i<=rows;i++){
+                document.write("<div class=container2>");
+
+                for(j=1;j<=cols;j++){
+                    if((i+j)%2==0)
+                        document.write("<div class=inner1></div>");
+                    else
+                        document.write("<div class=inner2></div>");
+                }
+                    
+                
+                document.write("</div>")
+            }
+        </script>
+    </div>
+    
+</body>
+</html>

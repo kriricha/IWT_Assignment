@@ -1,0 +1,33 @@
+body{
+    background-color:  rgba(13, 202, 189, 0.5);
+    background-image: linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url('images/34.jpg');
+    width: 80%;
+    height: 200px;
+    background-size: cover;
+    padding: 20px;
+}
+
+h1{
+    background-color: violet;
+    font-weight: bold;
+    color: black;
+    font-size: 30px;
+}
+
+h2{
+    background-color: rgb(221, 48, 17);
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+p{
+    color: white;
+    font-size: 15px;
+    line-height: 50px;
+}
+
+.highlight{
+    background-color:green;
+    padding:0.1em 0.2em;
+   }

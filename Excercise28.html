@@ -1,0 +1,45 @@
+<!--28. Write a JavaScript to display greeting message according to time with user name that 
+is accessing the webpage. When user clicks on the greeting message it should hide. 
+-->
+<html>
+    <head>
+        <title>Greeting Message</title>
+        <style>
+            #d1{
+                background-color: rgb(245, 244, 220);
+                height:200px;
+                width:100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/javascript">
+            name=prompt("Enter your First name ");
+            name1=prompt("Enter your last name");
+                var greet;
+                d=new Date();
+                hh=d.getHours();
+                if(hh<12)
+                {
+                    greet='Good Morning'+name+name1;
+                }
+                else if(hh<16)
+                {
+                    greet='Good Afternoon'+name+name1;
+                }
+                if(hh>16)
+                {
+                    greet='Good Evening'+name+name1;
+                }    
+                s=document.getElementById("d1");
+                s.innerHTML=greet;
+            // function hide()
+            // {
+            //     d=document.getElementById("d1");
+            //     d.innerHTML=" ";
+            // }
+            // document.write("<button onclick='hide()'>HIDE</button>");
+        </script>
+    </body>
+</html>

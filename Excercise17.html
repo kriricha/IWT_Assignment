@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Question 17</title>
+        <style>
+            body {
+                margin: 10px;
+                padding: 8px;
+                background-image: url("../images/21.jpg");
+            }
+        
+            .row{
+                border: 1px solid black;
+                padding: 10px;
+                background: rgba(13, 215, 13, 0.704);
+                margin: 10px;
+            }
+
+            .column1{               
+                float: left;
+                width: 40%;
+                position: absolute;
+                top: 20%;
+                left: 5%;
+                display: block;
+                margin: 10px;
+                padding: 10px 10px 10px 8px;
+                border: solid rgb(119, 9, 209) 10px;
+                background-color: rgb(214, 234, 35);
+                box-shadow: 10px 10px 10px black;
+            }
+
+            .column2{               
+                float: right;
+                width: 40%;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+                display: block;
+                margin: 10px;
+                padding: 10px 10px 10px 8px;
+                border: solid rgb(119, 9, 209) 10px;
+                background-color: rgb(220, 224, 23);
+                box-shadow: 10px 10px 10px black;
+            }
+
+            .img1{
+                display: block;
+                margin-left: 10px;
+                float: right;
+                height: 100px;
+            }
+
+            .img2{
+                display: block;
+                margin-left: 10px;
+                float: right;
+                height: 100px;
+            }
+        </style>
+        
+    </head>
+
+    <head>
+        <div class="row">
+            <h1>Columns using float</h1>
+            <div class="column1">
+                TCP is a stream-oriented protocol. This means that the data is presented from the application program to TCP as a stream of bytes. Each byte of data has a position in the
+                stream. However, there are occasions in which an application program needs to send
+                urgent bytes, some bytes that need to be treated in a special way by the application at
+                the other end. The solution is to send a segment with the URG bit set. The sending
+                application program tells the sending TCP that the piece of data is urgent. The sending
+                TCP creates a segment and inserts the urgent data at the beginning of the segment. The
+                rest of the segment can contain normal data from the buffer. The urgent pointer field in
+                the header defines the end of the urgent data (the last byte of urgent data).
+                The figure shows the two FSMs used by the TCP client and server combined in one
+                diagram. The ovals represent the states. The transition from one state to another is shown
+                using directed lines. Each line has two strings separated by a slash. The first string is the
+                input, what TCP receives. The second is the output, what TCP sends. The dotted black
+                lines in the figure represent the transition that a server normally goes through; the solid
+                black lines show the transitions that a client normally goes through. However, in some situations, a server transitions through a solid line or a client transitions through a dotted lin
+                <img class ="img1" src = "../images/14.jpeg" />
+            </div>
+            <div class="column2">
+                <img class ="img2" src = "../images/20.jpeg" />
+                After half closing the connection, data can travel from the server to the client and
+                acknowledgments can travel from the client to the server. The client cannot send any
+                more data to the server. Note the sequence numbers we have used. The second segment
+                (ACK) consumes no sequence number. Although the client has received sequence number y1 and is expecting y, the server sequence number is still y1. When the connection finally closes, the sequence number of the last ACK segment is still x, because no
+                sequence numbers are consumed during data transfer in that direction. 
+                A duplicate segment from one connection might appear in the next one. Assume a
+                client and a server have closed a connection. After a short period of time, they open
+                a connection with the same socket addresses (same source and destination IP
+                addresses and same source and destination port numbers). This new connection is
+                called an incarnation of the old one. A duplicated segment from the previous connection may arrive in this new connection and be interpreted as belonging to the
+                new connection if there is not enough time between the two connections. To prevent
+                this problem, TCP requires that an incarnation cannot occur unless 2MSL amount
+                of time has elapsed. Some implementations, however, ignore this rule if the initial
+                sequence number of the incarnation is greater than the last sequence number used
+                in the previous connection. 
+            </div>
+        </div>
+    </head>
+</html>
